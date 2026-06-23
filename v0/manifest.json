@@ -1,0 +1,12 @@
+{
+  "schema_version": 0,
+  "artifact": "remote_config.json",
+  "config_id": "2026-mostvpn-test-relay-20260622-001",
+  "signature": {
+    "alg": "ed25519",
+    "key_id": "config-signing-dev-2026-01"
+  },
+  "remote_config_sha256": "55b55195f0855911d4c9a3e20ee02365aa7e7123eb046271f0e70e89354fadae",
+  "canonical_payload_sha256": "c33f67e68dd49e85d64d5c98aedf8d86f174030c2699d5aedc8932b3473908b3",
+  "generated_by": "tools/config-publishing/prepare-remote-config.mjs"
+}
