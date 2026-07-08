@@ -1,6 +1,6 @@
 {
   "schema_version": 0,
-  "config_id": "2026-mostvpn-test-relay-20260622-001",
+  "config_id": "2026-mostvpn-test-relay-20260622-001-free-a",
   "issued_at": "2026-06-22T15:37:53Z",
   "expires_at": "2026-12-31T00:00:00Z",
   "min_app_version": {
@@ -18,7 +18,7 @@
       "internal-test",
       "direct-apk"
     ],
-    "bucket": "internal-test"
+    "bucket": "free-a"
   },
   "pools": [
     {
@@ -134,7 +134,7 @@
   ],
   "signature": {
     "alg": "ed25519",
-    "key_id": "config-signing-dev-2026-01",
-    "value": "QseJkZ4r5ibKIM/wqfR3z5u3f9SwWx+T5x1q+IyaBu2uRAOnCwL3scfpo0u3keFvWsVgBkgftSFG27XlOWlBDA=="
+    "key_id": "config-signing-prod-2026-07-current",
+    "value": "5cU7CP/wW87WxkDiXtpbXMfe/k9sPBeyHTnZWrQ9N8Bu5JlDHhnLBkn4HQArDJbka9C6kMC0E1wE6PCdrfpMAA=="
   }
 }

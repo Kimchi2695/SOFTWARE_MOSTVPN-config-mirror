@@ -1,0 +1,140 @@
+{
+  "schema_version": 0,
+  "config_id": "2026-mostvpn-test-relay-20260622-001-internal-test",
+  "issued_at": "2026-06-22T15:37:53Z",
+  "expires_at": "2026-12-31T00:00:00Z",
+  "min_app_version": {
+    "android": "0.1.0",
+    "macos": "0.1.0"
+  },
+  "audience": {
+    "country": [
+      "RU"
+    ],
+    "platform": [
+      "android"
+    ],
+    "channel": [
+      "internal-test",
+      "direct-apk"
+    ],
+    "bucket": "internal-test"
+  },
+  "pools": [
+    {
+      "pool_id": "internal-test-eu-frankfurt",
+      "type": "internal-test",
+      "region": "eu-frankfurt",
+      "priority": 100,
+      "enabled": true,
+      "max_sessions_per_device": 1,
+      "abuse_policy": "internal-test"
+    }
+  ],
+  "modes": [
+    {
+      "mode_id": "vless-wss-mostvpn-test-frankfurt-01",
+      "pool_id": "internal-test-eu-frankfurt",
+      "enabled": true,
+      "protocol": "vless",
+      "transport": "ws",
+      "security": "tls",
+      "server_host": "p01--sing-box--fm7gbglpj7ql.code.run",
+      "server_port": 443,
+      "sni": "p01--sing-box--fm7gbglpj7ql.code.run",
+      "credential_ref": "cred-vless-mostvpn-test-frankfurt-01",
+      "ws": {
+        "path": "/mostvpn-09091992",
+        "host_header": "p01--sing-box--fm7gbglpj7ql.code.run",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "utls": {
+        "enabled": true,
+        "fingerprint": "chrome"
+      },
+      "tun": {
+        "mtu": 1400,
+        "stack": "system",
+        "ipv6_policy": "disabled"
+      },
+      "dns": {
+        "strategy": "ipv4_only",
+        "remote_resolver": "https://1.1.1.1/dns-query"
+      },
+      "eligibility": {
+        "platform": [
+          "android"
+        ],
+        "network_class": [
+          "wifi",
+          "mobile",
+          "unknown"
+        ],
+        "country": [
+          "RU"
+        ]
+      },
+      "retry": {
+        "connect_timeout_ms": 8000,
+        "max_attempts": 1
+      },
+      "health_weight": 100
+    }
+  ],
+  "credentials": [
+    {
+      "credential_ref": "cred-vless-mostvpn-test-frankfurt-01",
+      "type": "vless_uuid",
+      "value": "9f8e8621-d88e-4470-b636-8ddce67ed691",
+      "pool_id": "internal-test-eu-frankfurt",
+      "expires_at": "2026-12-31T00:00:00Z"
+    }
+  ],
+  "fallback_order": [
+    {
+      "order_id": "android-internal-test-default",
+      "mode_ids": [
+        "vless-wss-mostvpn-test-frankfurt-01"
+      ],
+      "max_total_attempts": 1,
+      "stop_on_first_success": true
+    }
+  ],
+  "dns_policy": {
+    "strategy": "ipv4_only",
+    "remote_resolvers": [
+      "https://1.1.1.1/dns-query",
+      "https://8.8.8.8/dns-query"
+    ],
+    "hijack_dns": true,
+    "bootstrap_resolver": "system"
+  },
+  "telemetry_policy": {
+    "enabled": false,
+    "sample_rate": 0,
+    "events": [
+      "config_fetch_result",
+      "connection_attempt_result",
+      "tunnel_validation_result"
+    ],
+    "include_debug_logs": false
+  },
+  "messages": [
+    {
+      "message_id": "internal-test-config",
+      "severity": "info",
+      "platform": [
+        "android"
+      ],
+      "title": "Internal test mode",
+      "body": "This signed config is for MOSTVPN internal Android relay testing.",
+      "expires_at": "2026-12-31T00:00:00Z"
+    }
+  ],
+  "signature": {
+    "alg": "ed25519",
+    "key_id": "config-signing-prod-2026-07-current",
+    "value": "Dgop8a9JZUpZ9suqHAFlzZR+dE7a2xNgmE7i92ohGYED+rJQ+uoDINg8yfqwGvNIKEMCrUu+42jZuL3vOnXhDQ=="
+  }
+}
